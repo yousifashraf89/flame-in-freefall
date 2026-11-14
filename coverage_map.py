@@ -14,7 +14,7 @@ HABITATS = [  # (name, O2 %, pressure psi) - from the challenge statement
     ("Moon base & rover (planned)", 30, 10.2),
     ("Spacesuit", 100, 4.3),
 ]
-PHASE_COLORS = {"solid": "#FF5D5D", "solid (smoke)": "#E7F434", "liquid": "#3DDC84", "gas": "#2491FF"}
+PHASE_COLORS = {"solid": "#E52207", "solid (smoke)": "#D97706", "liquid": "#16A34A", "gas": "#0050D8"}
 LABELS = {"solid": "Solid materials", "solid (smoke)": "Smoke samples", "liquid": "Liquid droplets", "gas": "Gas flames"}
 ORDER = ["gas", "liquid", "solid (smoke)", "solid"]  # solids drawn last so they stay visible
 
@@ -28,10 +28,10 @@ def build_figure(df: pd.DataFrame) -> go.Figure:
 
     fig = go.Figure()
     # Moon-base envelope: >=30% O2 at <=10.2 psi
-    fig.add_shape(type="rect", x0=30, x1=100, y0=3, y1=10.2, fillcolor="rgba(255,122,24,0.10)",
-                  line=dict(color="rgba(255,122,24,0.9)", dash="dot"), layer="below")
+    fig.add_shape(type="rect", x0=30, x1=100, y0=3, y1=10.2, fillcolor="rgba(255,88,4,0.08)",
+                  line=dict(color="rgba(255,88,4,0.9)", dash="dot"), layer="below")
     fig.add_annotation(x=65, y=math.log10(8.8), text=f"Moon-base / rover envelope: {len(moon)} of {len(d)} tests",
-                       showarrow=False, font=dict(size=13, color="#FF9A4D"))
+                       showarrow=False, font=dict(size=13, color="#C2410C"))
 
     for phase in sorted(d.fuel_phase.unique(), key=lambda p: ORDER.index(p) if p in ORDER else 0):
         g = d[d.fuel_phase == phase]
@@ -48,16 +48,16 @@ def build_figure(df: pd.DataFrame) -> go.Figure:
 
     for name, o2, p in HABITATS:
         fig.add_trace(go.Scatter(x=[o2], y=[p], mode="markers+text", text=[name], textposition="middle left" if o2 > 90 else "top center",
-                                 marker=dict(symbol="star", size=20, color="#FFD166", line=dict(color="#0B1020", width=1)),
-                                 textfont=dict(color="#FFD166", size=12), showlegend=False,
+                                 marker=dict(symbol="star", size=20, color="#1B2B85", line=dict(color="white", width=1)),
+                                 textfont=dict(color="#1B2B85", size=13), showlegend=False,
                                  hovertemplate=f"<b>{name}</b><br>{o2}% O2 · {p} psi<extra></extra>"))
 
     fig.update_layout(
-        title=dict(text="Where NASA has burned things in microgravity vs. where crews will live", font=dict(size=16)),
+        title=dict(text="Every NASA microgravity fire test, by oxygen and pressure", font=dict(size=17)),
         xaxis=dict(title="Oxygen concentration (% by volume)", range=[5, 102]),
         yaxis=dict(title="Pressure (psi, log scale)", type="log", range=[0.48, 1.9],
                    tickvals=[4, 5, 7, 10, 14.7, 20, 30, 45, 70], ticktext=["4", "5", "7", "10", "14.7", "20", "30", "45", "70"]),
-        template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(255,255,255,0.02)", height=600, legend=dict(orientation="h", y=-0.18))
+        template="plotly_white", paper_bgcolor="rgba(0,0,0,0)", height=560, legend=dict(orientation="h", y=-0.18))
     return fig
 
 

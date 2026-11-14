@@ -115,27 +115,27 @@ def tradeoff_figure(tests, coverage_grid, phases, o2_sel, p_sel, habitats):
     o2s, ps = np.linspace(0.18, 1.0, 83), np.geomspace(3.5, 16, 70)
     z = coverage_grid(tests, phases, o2s, ps)
     fig = go.Figure(go.Heatmap(x=o2s * 100, y=ps, z=z, zmin=0, zmax=1, colorbar=dict(title="fire data<br>coverage"),
-                               colorscale=[[0, "#151622"], [0.4, "#1b2b85"], [0.75, "#2491ff"], [1, "#e7f434"]],
+                               colorscale=[[0, "#F4F6FB"], [0.35, "#C7D6F5"], [0.7, "#5B8DEF"], [1, "#1B2B85"]],
                                hovertemplate="%{x:.0f}% O₂, %{y:.1f} psi<br>data coverage %{z:.2f}<extra></extra>"))
     O, P = np.meshgrid(o2s, ps)
     fig.add_contour(x=o2s * 100, y=ps, z=prebreathe_index(O, P), showscale=False, hoverinfo="skip",
                     contours=dict(start=0.5, end=3.0, size=0.5, coloring="none", showlabels=True,
-                                  labelfont=dict(color="#dfe1e2", size=11)),
-                    line=dict(color="rgba(223,225,226,.55)", width=1, dash="dot"), name="pre-breathe index")
+                                  labelfont=dict(color="#334155", size=11)),
+                    line=dict(color="rgba(51,65,85,.55)", width=1, dash="dot"), name="pre-breathe index")
     pp = np.geomspace(3.5, 16, 60)
     fig.add_scatter(x=[increased_burning_limit_pct(p) for p in pp], y=pp, mode="lines", name="NFPA 99B: increased burning →",
                     line=dict(color="#ff5804", width=3))
     fig.add_scatter(x=np.clip(3.087 / pp * 100, 0, 100), y=pp, mode="lines", name="sea-level-equivalent oxygen (3.1 psi O₂)",
-                    line=dict(color="#3DDC84", width=2, dash="dash"))
+                    line=dict(color="#16A34A", width=3, dash="dash"))
     for name, (ho2, hp) in habitats.items():
         fig.add_scatter(x=[ho2 * 100], y=[hp], mode="markers+text", text=[name],
                         **({} if ho2 > 0.9 else {"textposition": "top center"}),
-                        marker=dict(symbol="star", size=16, color="#e7f434", line=dict(color="#151622", width=1)),
-                        textfont=dict(color="#e7f434"), showlegend=False,
+                        marker=dict(symbol="star", size=18, color="#FF5804", line=dict(color="white", width=1)),
+                        textfont=dict(color="#151622", size=13), showlegend=False,
                         **({"textposition": "middle left"} if ho2 > 0.9 else {}))
     fig.add_scatter(x=[o2_sel * 100], y=[p_sel], mode="markers", name="your selection",
                     marker=dict(symbol="x", size=15, color="#ff5804", line=dict(width=2)))
-    fig.update_layout(title="The habitat atmosphere trade-off: shorter pre-breathe ↔ more fire risk, less data",
+    fig.update_layout(title="Shorter pre-breathe ↔ more fire risk and less data",
                       xaxis=dict(title="Oxygen (%)", range=[18, 104]),
                       yaxis=dict(title="Cabin pressure (psi, log scale)", type="log"),
                       legend=dict(orientation="h", y=-0.2))
@@ -146,7 +146,7 @@ def earth_figure(tests):
     import plotly.graph_objects as go
     d = tests.dropna(subset=["o2_fraction", "pressure_atm"])
     fig = go.Figure()
-    colors = {"solid": "#FF5D5D", "solid (smoke)": "#e7f434", "liquid": "#3DDC84", "gas": "#2491ff"}
+    colors = {"solid": "#E52207", "solid (smoke)": "#D97706", "liquid": "#16A34A", "gas": "#0050D8"}
     for ph, g in d.groupby("fuel_phase"):
         fig.add_scatter(x=g.o2_fraction * 100, y=g.pressure_atm * PSI, mode="markers", name=f"PSI tests: {ph}",
                         marker=dict(size=6, color=colors.get(ph, "#888"), opacity=.55))
@@ -154,7 +154,7 @@ def earth_figure(tests):
         fig.add_shape(type="rect", x0=r.o2_lo, x1=r.o2_hi, y0=r.p_lo * 0.97, y1=r.p_hi * 1.03,
                       line=dict(color="#ff5804", width=2), fillcolor="rgba(255,88,4,.18)")
         fig.add_annotation(x=min((r.o2_lo + r.o2_hi) / 2, 88), y=math.log10(r.p_hi * 1.12), text=r.setting, showarrow=False,
-                           font=dict(color="#ffb38a", size=12))
+                           font=dict(color="#C2410C", size=13))
     fig.update_layout(title="Oxygen-rich places on Earth vs where NASA's microgravity tests ran",
                       xaxis=dict(title="Oxygen (%)", range=[5, 104]),
                       yaxis=dict(title="Pressure (psi, log scale)", type="log", range=[0.55, 1.85],

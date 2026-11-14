@@ -159,6 +159,20 @@ for f, pid, inv, mat, flow in [("PSI-102__SAME.csv", "PSI-102", "SAME", "Sample 
 # Not mapped (no O2/pressure in table): PSI-21 CLD Flame, PSI-22 E-FIELD, PSI-47 DAFT (dust), PSI-142 (figure index)
 
 out = pd.concat(rows, ignore_index=True)
+
+# ---------- enrich BASS with the PSI "As Run" test matrix (measured O2, pressure, crew-noted outcome), if harvested
+asrun = Path(__file__).parent / "data" / "extra" / "bass_as_run.csv"
+if asrun.exists():
+    ar = pd.read_csv(asrun, dtype={"test_no": str}).drop_duplicates("test_no").set_index("test_no")
+    m = out.psi_id.eq("PSI-26")
+    tid = out.loc[m, "test_id"].astype(str).str.replace(r"\.0$", "", regex=True)
+    hit = tid.isin(ar.index)
+    idx = tid[hit].index
+    out.loc[idx, "o2_fraction"] = ar.loc[tid[hit], "o2_fraction"].values
+    out.loc[idx, "pressure_atm"] = ar.loc[tid[hit], "pressure_atm"].values
+    out.loc[idx, "outcome"] = ar.loc[tid[hit], "outcome"].values
+    out.loc[idx, ["o2_source", "p_source"]] = "measured"
+    print(f"BASS: {hit.sum()} tests updated with measured O2/pressure from the As Run matrix")
 out["fuel"] = out["fuel"].astype(str).str.strip()
 # sanity: physically impossible values -> blank
 out.loc[~out["pressure_atm"].between(0.05, 10), "pressure_atm"] = np.nan
