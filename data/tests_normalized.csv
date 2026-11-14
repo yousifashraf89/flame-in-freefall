@@ -2041,47 +2041,49 @@ PSI-159,ACME CFI-G,gas,,,,,0.0,N2,,,measured,measured
 PSI-159,ACME CFI-G,gas,,,,,0.0,N2,,,measured,measured
 PSI-159,ACME CFI-G,gas,,,,,0.0,N2,,,measured,measured
 PSI-159,ACME CFI-G,gas,,,,,0.0,N2,,,measured,measured
-PSI-20,ACME BRE,gas,2019-Feb-8,100% C2H4,0.21,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-Feb-8,100% C2H4,0.265,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-Feb-8,100% C2H4,0.4,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-Feb-20,100% C2H4,0.265,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-Feb-20,100% C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-Feb-25,50% C2H4,0.21,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-Feb-25,50% C2H4,0.265,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-Feb-25,50% C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-Feb-25,50% C2H4,0.4,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-March-4,50% C2H4,0.265,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-March-4,50% C2H4,0.4,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-March-11,50% C2H4,0.265,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-March-11,50% C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-March-28,100%C2H4,0.265,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-March-28,100%C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-April-4,100%C2H4,0.21,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-April-4,100%C2H4,0.265,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2019-April-4,100%C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Sept-3,100% C2H4,0.25,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Sept-3,100% C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Sept-3,100% C2H4,0.4,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Oct-17,100% C2H4,0.265,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Oct-17,100% C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-5,100% CH4,0.25,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-5,100% CH4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-5,100% CH4,0.4,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-4,100% CH4,0.25,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-4,100% CH4,0.4,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-11,50% C2H4,0.25,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-11,50% C2H4,0.4,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-17,100% C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-17,100% C2H4,0.4,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-23,100% C2H4,0.25,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-23,100% C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2020-Dec-23,100% C2H4,0.4,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2021-Jan-20,100% C2H4,0.21,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2021-Jan-20,100% C2H4,0.265,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2021-Jan-20,100% C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2021-Jan-28,100% C2H4,0.25,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2021-Jan-28,100% C2H4,0.34,,0.0,N2,,,listed,unknown
-PSI-20,ACME BRE,gas,2021-Jan-28,100% C2H4,0.4,,0.0,N2,,,listed,unknown
+PSI-20,ACME BRE,gas,2019-Feb-8,100% C2H4,0.21,1.0002721829069134,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-Feb-8,100% C2H4,0.265,0.6940664126292868,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-Feb-8,100% C2H4,0.4,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2019-Feb-20,100% C2H4,0.265,0.6940664126292868,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-Feb-20,100% C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-Feb-25,50% C2H4,0.21,1.0002721829069134,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-Feb-25,50% C2H4,0.265,0.6940664126292868,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-Feb-25,50% C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-Feb-25,50% C2H4,0.4,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2019-March-4,50% C2H4,0.265,0.6940664126292868,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-March-4,50% C2H4,0.4,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2019-March-7,50% C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-March-11,50% C2H4,0.265,0.6940664126292868,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-March-11,50% C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-March-28,100%C2H4,0.265,0.6940664126292868,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-March-28,100%C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-April-1,100%C2H4,0.21,1.0002721829069134,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-April-4,100%C2H4,0.21,1.0002721829069134,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-April-4,100%C2H4,0.265,0.6940664126292868,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2019-April-4,100%C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2020-Sept-3,100% C2H4,0.25,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2020-Sept-3,100% C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2020-Sept-3,100% C2H4,0.4,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2020-Oct-17,100% C2H4,0.265,0.6940664126292868,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2020-Oct-17,100% C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2020-Dec-5,100% CH4,0.25,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2020-Dec-5,100% CH4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2020-Dec-5,100% CH4,0.4,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2020-Dec-4,100% CH4,0.25,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2020-Dec-4,100% CH4,0.4,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2020-Dec-11,50% C2H4,0.25,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2020-Dec-11,50% C2H4,0.4,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2020-Dec-17,100% C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2020-Dec-17,100% C2H4,0.4,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2020-Dec-23,100% C2H4,0.25,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2020-Dec-23,100% C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2020-Dec-23,100% C2H4,0.4,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2021-Jan-20,100% C2H4,0.21,1.0002721829069134,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2021-Jan-20,100% C2H4,0.265,0.6940664126292868,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2021-Jan-20,100% C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2021-Jan-28,100% C2H4,0.25,,0.0,N2,burned (no airflow),,listed,unknown
+PSI-20,ACME BRE,gas,2021-Jan-28,100% C2H4,0.34,0.5579749591725639,0.0,N2,burned (no airflow),,listed,nominal (BRE atmosphere pair)
+PSI-20,ACME BRE,gas,2021-Jan-28,100% C2H4,0.4,,0.0,N2,burned (no airflow),,listed,unknown
 PSI-23,ACME s-Flame,gas,19254,50% C2H4 with N2,0.21,1.0,0.0,N2,,,listed,listed
 PSI-23,ACME s-Flame,gas,19256,50% C2H4 with N3,0.21,1.0,0.0,N2,,,listed,listed
 PSI-23,ACME s-Flame,gas,19304,45% CH4 with N2,0.21,1.0,0.0,N2,,,listed,listed
@@ -2229,75 +2231,75 @@ PSI-25,BASS-II,solid,T27,1 cm SIBAL,0.207,1.0,,N2,,,measured,assumed_cabin_air
 PSI-25,BASS-II,solid,T28a,1 cm SIBAL,0.207,1.0,,N2,,,measured,assumed_cabin_air
 PSI-25,BASS-II,solid,T28b,1 cm SIBAL,0.207,1.0,,N2,,,measured,assumed_cabin_air
 PSI-25,BASS-II,solid,T29,1 cm SIBAL,0.207,1.0,,N2,,,measured,assumed_cabin_air
-PSI-26,BASS,solid,1,SIBAL 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,42,PMMA sphere 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,18,PMMA sphere 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,7,SIBAL 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,8,SIBAL 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,43,PMMA sphere 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,44,PMMA sphere 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,45,PMMA sphere 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,19,PMMA sphere 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,20,PMMA sphere 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,21,PMMA sphere 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,4,SIBAL 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,10,SIBAL 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,12,Nomex blend 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,54,PMMA 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,55,PMMA 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,56,PMMA 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,57,PMMA 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,110,PMMA 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,30,PMMA 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,31,PMMA 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,32,PMMA 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,33,PMMA 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
+PSI-26,BASS,solid,1,SIBAL 2 cm,0.221,0.97,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,42,PMMA sphere 2 cm,0.221,0.97,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,18,PMMA sphere 1 cm,0.221,0.97,,N2,went out when airflow stopped,,measured,measured
+PSI-26,BASS,solid,7,SIBAL 2 cm,0.219,0.97,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,8,SIBAL 2 cm,0.219,0.97,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,43,PMMA sphere 2 cm,0.217,0.98,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,44,PMMA sphere 2 cm,0.217,0.98,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,45,PMMA sphere 2 cm,0.217,0.98,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,19,PMMA sphere 1 cm,0.2188704318936876,0.9901315789473684,,N2,went out when airflow stopped,,measured,measured
+PSI-26,BASS,solid,20,PMMA sphere 1 cm,0.2188704318936876,0.9901315789473684,,N2,went out when airflow stopped,,measured,measured
+PSI-26,BASS,solid,21,PMMA sphere 1 cm,0.2188704318936876,0.9901315789473684,,N2,blown off by airflow,,measured,measured
+PSI-26,BASS,solid,4,SIBAL 2 cm,0.2162921348314606,0.9836842105263158,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,10,SIBAL 1 cm,0.2162921348314606,0.9836842105263158,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,12,Nomex blend 2 cm,0.2162921348314606,0.9836842105263158,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,54,PMMA 2 cm,0.217,0.984,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,55,PMMA 2 cm,0.217,0.984,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,56,PMMA 2 cm,0.217,0.984,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,57,PMMA 2 cm,0.217,0.984,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,110,PMMA 2 cm,0.217,0.984,,N2,went out when airflow stopped,,measured,measured
+PSI-26,BASS,solid,30,PMMA 1 cm,0.2117217108825121,0.9721052631578948,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,31,PMMA 1 cm,0.2117217108825121,0.9721052631578948,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,32,PMMA 1 cm,0.2117217108825121,0.9721052631578948,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,33,PMMA 1 cm,0.2117217108825121,0.9721052631578948,,N2,burned (no extinction noted),,measured,measured
 PSI-26,BASS,solid,12-R,Nomex blend 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
 PSI-26,BASS,solid,12-R2,Nomex blend 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,46,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,47,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,48,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,49,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,22,1 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,23,1 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,24,1 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,25,1 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,58,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,59,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,60,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,61,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,5,SIBAL 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,14,Nomex III Natural,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,66,PMMA slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,67,PMMA slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,34,1 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,35,1 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,16,ultem sheet,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
+PSI-26,BASS,solid,46,2 cm sphere,0.2118405423801198,0.985907894736842,,N2,went out when airflow stopped,,measured,measured
+PSI-26,BASS,solid,47,2 cm sphere,0.2118405423801198,0.985907894736842,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,48,2 cm sphere,0.2118405423801198,0.985907894736842,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,49,2 cm sphere,0.2118405423801198,0.985907894736842,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,22,1 cm sphere,0.2088959914768944,0.9880263157894736,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,23,1 cm sphere,0.2088959914768944,0.9880263157894736,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,24,1 cm sphere,0.2088959914768944,0.9880263157894736,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,25,1 cm sphere,0.2088959914768944,0.9880263157894736,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,58,2 cm sphere,0.2174862504043998,0.9761052631578948,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,59,2 cm sphere,0.2174862504043998,0.9761052631578948,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,60,2 cm sphere,0.2174862504043998,0.9761052631578948,,N2,went out when airflow stopped,,measured,measured
+PSI-26,BASS,solid,61,2 cm sphere,0.2174862504043998,0.9761052631578948,,N2,went out when airflow stopped,,measured,measured
+PSI-26,BASS,solid,5,SIBAL 2 cm,0.2198342653102472,0.9765131578947368,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,14,Nomex III Natural,0.2198342653102472,0.9765131578947368,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,66,PMMA slab,0.2198342653102472,0.9765131578947368,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,67,PMMA slab,0.2198342653102472,0.9765131578947368,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,34,1 cm sphere,0.2189441407812291,0.9869736842105264,,N2,went out when airflow stopped,,measured,measured
+PSI-26,BASS,solid,35,1 cm sphere,0.2189441407812291,0.9869736842105264,,N2,burned out,,measured,measured
+PSI-26,BASS,solid,16,ultem sheet,0.2189441407812291,0.9869736842105264,,N2,did not ignite,,measured,measured
 PSI-26,BASS,solid,5b,SIBAL 2 cm   opposed flow,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,6,SIBAL 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,82,candle,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
+PSI-26,BASS,solid,6,SIBAL 2 cm,0.2221985343104597,0.9875,,N2,burned out,,measured,measured
+PSI-26,BASS,solid,82,candle,0.2221985343104597,0.9875,,N2,went out (other),,measured,measured
 PSI-26,BASS,solid,82a,candle,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
 PSI-26,BASS,solid,82b,candle,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,68,pmma slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,69,pmma slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,111,2 cm sphere   wake ign,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,112,2 cm sphere   wake ign,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,113,2 cm sphere   wake ign,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,2,SIBAL 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,3,SIBAL 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,15,nomex natural III,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,13,Nomex blend 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,17,ultem sheet,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,114,pmma sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,62,PMMA sphere 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,63,PMMA sphere 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,64,PMMA sphere 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,65,PMMA sphere 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,118,PMMA sphere 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
+PSI-26,BASS,solid,68,pmma slab,0.2221985343104597,0.9875,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,69,pmma slab,0.2238380609934745,0.9880263157894736,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,111,2 cm sphere   wake ign,0.2238380609934745,0.9880263157894736,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,112,2 cm sphere   wake ign,0.2238380609934745,0.9880263157894736,,N2,went out when airflow stopped,,measured,measured
+PSI-26,BASS,solid,113,2 cm sphere   wake ign,0.2238380609934745,0.9880263157894736,,N2,blown off by airflow,,measured,measured
+PSI-26,BASS,solid,2,SIBAL 2 cm,0.227219827016161,0.9949210526315788,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,3,SIBAL 2 cm,0.2267365661861074,1.0039473684210527,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,15,nomex natural III,0.225254635675111,1.0076315789473684,,N2,did not ignite,,measured,measured
+PSI-26,BASS,solid,13,Nomex blend 2 cm,0.225254635675111,1.0076315789473684,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,17,ultem sheet,0.225254635675111,1.0076315789473684,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,114,pmma sphere,0.225071820318621,1.0076315789473684,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,62,PMMA sphere 2 cm,0.2258354856382562,1.0087105263157894,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,63,PMMA sphere 2 cm,0.2258354856382562,1.0087105263157894,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,64,PMMA sphere 2 cm,0.2258354856382562,1.0087105263157894,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,65,PMMA sphere 2 cm,0.2258354856382562,1.0087105263157894,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,118,PMMA sphere 2 cm,0.2258354856382562,1.0087105263157894,,N2,burned (no extinction noted),,measured,measured
 PSI-26,BASS,solid,,SOOT Cleaning,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,11,SIBAL 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,9,SIBAL 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,102,PMMA sphere 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
+PSI-26,BASS,solid,11,SIBAL 1 cm,0.215162301439728,0.9906842105263156,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,9,SIBAL 2 cm,0.2157922698897596,0.990657894736842,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,102,PMMA sphere 2 cm,0.2157922698897596,0.990657894736842,,N2,burned (no extinction noted),,measured,measured
 PSI-26,BASS,solid,83a,Japan Wax Candle   wake,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
 PSI-26,BASS,solid,83b,Japan Wax Candle   wake,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
 PSI-26,BASS,solid,83c,Japan Wax Candle   wake,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
@@ -2306,50 +2308,50 @@ PSI-26,BASS,solid,84b,Japan Wax Candle   wake,0.21,1.0,,N2,,,assumed_cabin_air,a
 PSI-26,BASS,solid,86a,Japan Wax Candle   wake,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
 PSI-26,BASS,solid,86b,Japan Wax Candle   wake,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
 PSI-26,BASS,solid,86c,Japan Wax Candle   wake,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,70,PMMA slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,71,PMMA slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,74,paraffin wax slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,75,parrafin wax slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,98,PMMA 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,99,PMMA 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,114,PMMA 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,115,pmma 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,116,pmma 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,117,pmma 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
+PSI-26,BASS,solid,70,PMMA slab,0.2193393035902708,0.9726578947368422,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,71,PMMA slab,0.2193393035902708,0.9726578947368422,,N2,burned out,,measured,measured
+PSI-26,BASS,solid,74,paraffin wax slab,0.2193393035902708,0.9726578947368422,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,75,parrafin wax slab,0.2193393035902708,0.9726578947368422,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,98,PMMA 2 cm,0.1707,0.97,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,99,PMMA 2 cm,0.1707,0.97,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,114,PMMA 2 cm,0.225071820318621,1.0076315789473684,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,115,pmma 2 cm,0.211,0.982,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,116,pmma 2 cm,0.211,0.982,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,117,pmma 2 cm,0.211,0.982,,N2,went out (other),,measured,measured
 PSI-26,BASS,solid,117a,pmma 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,100,pmma 2 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,85,candle    paraffin   wake,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,93,candle    paraffin   wake,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,26,pmma 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,27,pmma 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,28,pmma 1 cm,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,87,candle   Japan wax,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,103,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,104,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,105,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,38,1 cm sphere   wake,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,39,1 cm wake sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,40,1 cm wake sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,72,pmma slab opposed,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,73,pmma slab   oppsed,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,118,2 cm pmma sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,119,2 cm pmma sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,89,parrafin wax candle,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,95,paraffin wax candle,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,92,candle   Japan wax,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,78,paraffin wax slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,50,2 cm pmma sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,51,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,52,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,53,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,106,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,107,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,108,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,109,2 cm sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,79,flat wax slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,80,flat wax slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,75,flat wax slab,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
-PSI-26,BASS,solid,53,pmma sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
+PSI-26,BASS,solid,100,pmma 2 cm,0.21111,0.98,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,85,candle    paraffin   wake,0.21111,0.98,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,93,candle    paraffin   wake,0.2113,0.98,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,26,pmma 1 cm,0.173,0.99,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,27,pmma 1 cm,0.171,0.99,,N2,put out with nitrogen,,measured,measured
+PSI-26,BASS,solid,28,pmma 1 cm,0.171,0.99,,N2,burned out,,measured,measured
+PSI-26,BASS,solid,87,candle   Japan wax,0.159,0.97,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,103,2 cm sphere,0.1753,0.97,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,104,2 cm sphere,0.1753,0.97,,N2,went out when airflow stopped,,measured,measured
+PSI-26,BASS,solid,105,2 cm sphere,0.205,0.97,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,38,1 cm sphere   wake,0.1667,0.976,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,39,1 cm wake sphere,0.1667,0.976,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,40,1 cm wake sphere,0.178,0.976,,N2,burned out,,measured,measured
+PSI-26,BASS,solid,72,pmma slab opposed,0.21,0.976,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,73,pmma slab   oppsed,0.21,0.976,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,118,2 cm pmma sphere,0.2258354856382562,1.0087105263157894,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,119,2 cm pmma sphere,0.1734,0.983,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,89,parrafin wax candle,0.1605,0.982,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,95,paraffin wax candle,0.1605,0.982,,N2,did not ignite,,measured,measured
+PSI-26,BASS,solid,92,candle   Japan wax,0.163,0.982,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,78,paraffin wax slab,0.163,0.982,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,50,2 cm pmma sphere,0.172,0.977,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,51,2 cm sphere,0.172,0.977,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,52,2 cm sphere,0.171,0.977,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,53,2 cm sphere,0.1713,0.977,,N2,did not ignite,,measured,measured
+PSI-26,BASS,solid,106,2 cm sphere,0.1717,0.98,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,107,2 cm sphere,0.1717,0.98,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,108,2 cm sphere,0.1724,0.98,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,109,2 cm sphere,0.1724,0.98,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,79,flat wax slab,0.174,0.9963,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,80,flat wax slab,0.2118,0.9963,,N2,burned (no extinction noted),,measured,measured
+PSI-26,BASS,solid,75,flat wax slab,0.2193393035902708,0.9726578947368422,,N2,went out (other),,measured,measured
+PSI-26,BASS,solid,53,pmma sphere,0.1713,0.977,,N2,did not ignite,,measured,measured
 PSI-26,BASS,solid,53a,pmma sphere,0.21,1.0,,N2,,,assumed_cabin_air,assumed_cabin_air
 PSI-98,Saffire-I,solid,S1,SIBAL Fabric,0.21600000000000003,1.0,20.0,N2,Concurrent,420.0,measured,assumed_cabin_air
 PSI-98,Saffire-I,solid,S2,SIBAL Fabric,0.215,1.0,20.0,N2,Opposed,70.0,measured,assumed_cabin_air

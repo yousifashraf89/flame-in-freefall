@@ -1,0 +1,182 @@
+[
+ {
+  "id": "L1",
+  "kind": "lesson",
+  "title": "Flames survive at lower oxygen in microgravity",
+  "source": "NASA Researcher's Guide to ISS Combustion Science (2015)",
+  "url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+  "text": "A candle on the Mir space station burned for up to 45 minutes and kept burning down to a lower oxygen level than the same candle would on Earth. BASS results indicate the standard NASA-STD-6001 Test 1 flammability screen is not conservative: some materials burn at lower oxygen in microgravity than on Earth.",
+  "tags": [
+   "prevention",
+   "solid",
+   "oxygen"
+  ]
+ },
+ {
+  "id": "L2",
+  "kind": "lesson",
+  "title": "The most dangerous airflow is about 10 cm/s, typical of spacecraft ventilation",
+  "source": "NASA Researcher's Guide (2015)",
+  "url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+  "text": "For flames spreading over solids, the flammability boundary has a minimum near a gas velocity of about 10 cm/s, which is also where flame spread is fastest. This is about the speed of spacecraft ventilation systems. Very low flow lets radiative losses put flames out; higher flow helps them.",
+  "tags": [
+   "prevention",
+   "solid",
+   "flow"
+  ]
+ },
+ {
+  "id": "L3",
+  "kind": "lesson",
+  "title": "In slow airflow, flames spread upstream",
+  "source": "NASA Researcher's Guide (2015)",
+  "url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+  "text": "When a thin fuel is ignited in the middle at low forced-flow speeds in space, the flame spreads upstream into the oncoming air, the opposite of normal-gravity behaviour where flames spread downstream with buoyant flow.",
+  "tags": [
+   "prevention",
+   "solid",
+   "flow"
+  ]
+ },
+ {
+  "id": "L4",
+  "kind": "lesson",
+  "title": "A local jet of extinguisher gas is not enough",
+  "source": "NASA Researcher's Guide (2015)",
+  "url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+  "text": "BASS findings show local application of suppressant did not reliably extinguish flames: the jet entrains surrounding air and can sustain the flame even when the ambient airflow is turned off.",
+  "tags": [
+   "suppression",
+   "solid"
+  ]
+ },
+ {
+  "id": "L5",
+  "kind": "lesson",
+  "title": "Smoke and soot form differently in microgravity",
+  "source": "NASA Researcher's Guide (2015)",
+  "url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+  "text": "Jet-flame experiments in low gravity showed smoke onset, flame heights, primary soot particle sizes and soot agglomerate structure that differ from normal gravity, so detectors calibrated on Earth may respond differently in space.",
+  "tags": [
+   "detection",
+   "gas",
+   "smoke"
+  ]
+ },
+ {
+  "id": "L6",
+  "kind": "lesson",
+  "title": "Near-limit flames oscillate before going out",
+  "source": "NASA Researcher's Guide (2015)",
+  "url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+  "text": "As the microgravity candle depleted its oxygen and approached extinction, its flame oscillated with growing amplitude, sometimes for over a minute, before going out. Similar oscillations occur in droplet combustion.",
+  "tags": [
+   "detection",
+   "suppression"
+  ]
+ },
+ {
+  "id": "L7",
+  "kind": "lesson",
+  "title": "Invisible cool flames keep burning after the visible flame goes out",
+  "source": "PSI-117 analysed FLEX data (Proc. Combust. Inst. 2023)",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+  "text": "In FLEX droplet tests (n-dodecane, about 4 mm, air), the visible hot flame went out when the droplet was about 3.5 mm across, but a low-temperature cool flame continued until the droplet was only about 0.4 mm at 1 atm. A crew could see a fire as out while it is still reacting.",
+  "tags": [
+   "detection",
+   "suppression",
+   "liquid"
+  ]
+ },
+ {
+  "id": "L8",
+  "kind": "lesson",
+  "title": "Turning off the fans is not a reliable way to put out a fire",
+  "source": "ACME BRE (PSI-20) test table + BASS As Run crew notes (PSI-26)",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-20",
+  "text": "It depends on the fuel. In BRE, gas flames that mimic burning plastics kept burning with no airflow at all, at 21% up to 40% O2, including the Moon-base/rover air (34% O2, 8.2 psi). But in BASS, 10 of 106 solid-material flames went out when the crew stopped the airflow, and BASS-II slowed the flow until flames went out in 31 of 129 runs. Shutting ventilation helps some fires and not others, and a nitrogen jet alone did not always stop the flame's wake. Plan for active suppression, not fan shutdown alone.",
+  "tags": [
+   "suppression",
+   "airflow",
+   "ventilation",
+   "fans",
+   "oxygen",
+   "moon"
+  ]
+ },
+ {
+  "id": "F1",
+  "kind": "next",
+  "title": "FM2: Flammability of Materials on the Moon",
+  "source": "NASA Glenn Combustion Science",
+  "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/flammability-of-materials-on-the-moon-fm2/",
+  "text": "The first combustion experiment on another planetary body. It burns four fuel samples on the Moon at 1/6 g in atmospheres planned for lunar habitats. Modelling and earlier tests suggest materials may burn at lower oxygen in lunar gravity than on Earth, so some materials non-flammable on Earth may burn in a Moon habitat.",
+  "tags": [
+   "partial gravity",
+   "solid",
+   "next"
+  ]
+ },
+ {
+  "id": "F2",
+  "kind": "next",
+  "title": "SoFIE: Solid Fuel Ignition and Extinction (on the ISS)",
+  "source": "NASA Glenn Combustion Science",
+  "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/solid-fuel-ignition-and-extinction-sofie/",
+  "text": "An ISS facility with five investigations on solid flammability. Its Narrow Channel Apparatus burns PMMA at oxygen levels from air up to 85%, with pressure adjusted to stay near the normal-breathing (normoxic) curve, measuring flame spread and extinction limits. Other parts study thick samples (GEL), ignition and suppression (MIST), flame spread vs fuel thickness (RTDFS) and links between 1-g and microgravity tests (SMuRF).",
+  "tags": [
+   "solid",
+   "oxygen",
+   "next"
+  ]
+ },
+ {
+  "id": "F3",
+  "kind": "next",
+  "title": "FLARE: Flammability Limits at Reduced-g Experiment",
+  "source": "NASA Glenn Combustion Science",
+  "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/flammability-limits-at-reduced-g-experiment-flare/",
+  "text": "An international JAXA, NASA and ESA project to correlate flammability limits in normal gravity and microgravity, so that ground tests can estimate how materials behave in space. It aims to propose a new standard test method that addresses shortcomings of NASA-STD-6001B.",
+  "tags": [
+   "solid",
+   "next"
+  ]
+ },
+ {
+  "id": "H1",
+  "kind": "history",
+  "title": "Apollo 1 (1967)",
+  "source": "NASA Safety & Mission Assurance",
+  "url": "https://sma.nasa.gov/sma-disciplines/accllp/apollo-1",
+  "text": "During a launch-pad test with the cabin pressurized with 100% oxygen, a flash fire swept through the spacecraft too quickly for the crew to open the hatches. Grissom, White and Chaffee died from toxic gases. NASA redesigned the hatch to open in seconds and restricted and controlled combustible materials in the cabin.",
+  "tags": [
+   "history",
+   "oxygen"
+  ]
+ },
+ {
+  "id": "H2",
+  "kind": "history",
+  "title": "Apollo 13 (1970)",
+  "source": "NASA Safety & Mission Assurance",
+  "url": "https://sma.nasa.gov/sma-disciplines/accllp/apollo-13",
+  "text": "An oxygen tank exploded on the way to the Moon, disabling fuel cells and forcing the crew to use the Lunar Module as a lifeboat. It shows how oxygen systems themselves can be the hazard.",
+  "tags": [
+   "history",
+   "oxygen"
+  ]
+ },
+ {
+  "id": "H3",
+  "kind": "history",
+  "title": "Fire aboard Mir (1997)",
+  "source": "NASA History",
+  "url": "https://www.nasa.gov/history/25-years-ago-fire-aboard-space-station-mir/",
+  "text": "A solid-fuel oxygen generator canister ignited, shooting a flame about three feet long that blocked the path to one Soyuz escape craft and filled the station with smoke. The crew used masks and foam extinguishers; the flame finally went out on its own. Investigators blamed contamination, most likely latex glove material, in the canister.",
+  "tags": [
+   "history",
+   "oxygen",
+   "detection"
+  ]
+ }
+]
