@@ -1,0 +1,12 @@
+pressure_atm,extinction_diameter_mm,kind,fuel,source
+0.5,3.48,visible (hot) flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
+0.75,3.57,visible (hot) flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
+1.0,3.56,visible (hot) flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
+1.25,3.62,visible (hot) flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
+3.0,3.56,visible (hot) flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
+0.5,1.89,cool flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
+0.75,0.49,cool flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
+1.0,0.39,cool flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
+1.0,0.48,cool flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
+1.25,0.38,cool flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
+3.0,0.0,cool flame,"n-dodecane, ~4 mm droplet, air","PSI-117 (FLEX flight data, Proc. Combust. Inst. 2023)"
