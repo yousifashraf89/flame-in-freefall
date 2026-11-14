@@ -39,6 +39,8 @@ CURATED = {
     "PSI-142": (["suppression"],                 "liquid",    "PSI-69"),
 }
 FUEL_WEIGHT = {"solid": 1.0, "gas (solid emulator)": 0.8, "liquid": 0.7, "gas": 0.5, "dust": 0.4}
+SHORT_NAMES = {"PSI-60": "SPICE soot analysis", "PSI-62": "BASS flame-spread model", "PSI-115": "SAME smoke simulation",
+               "PSI-117": "FLEX cool-flame CFD", "PSI-142": "FLEX cool-flame extinction", "PSI-47": "DAFT dust detection"}
 WEIGHTS = {"pillar": 0.35, "envelope": 0.30, "fuel": 0.20, "data": 0.15}
 
 
@@ -67,7 +69,7 @@ def score(inv: pd.DataFrame, tests: pd.DataFrame, o2: float, p_atm: float, weigh
             E *= 0.8
         F = FUEL_WEIGHT.get(phase, 0.5)
         D = math.log1p(n_tests.get(r.id, 0)) + math.log1p(r.n_publications or 0)
-        rows.append(dict(id=r.id, name=r.acronym if isinstance(r.acronym, str) else r.title[:40],
+        rows.append(dict(id=r.id, name=SHORT_NAMES.get(r.id) or (r.acronym if isinstance(r.acronym, str) else r.title[:40]),
                          pillars=", ".join(pillars), fuel_phase=phase, linked_to=link or "",
                          P=P, E=E, E_known=e_known, F=F, D_raw=D, n_tests=int(n_tests.get(r.id, 0))))
     s = pd.DataFrame(rows)
