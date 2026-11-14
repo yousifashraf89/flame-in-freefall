@@ -14,7 +14,7 @@ import streamlit as st
 from coverage_map import PHASE_COLORS, build_figure
 from features import (MATERIALS, PHASE_GROUPS, SAFFIRE2, briefing, coverage, coverage_grid, gap_table, material_tests,
                       material_verdict, pdf_report, suppression_summary)
-from models import FlexModel, reliability
+from models import FlexModel, raw_path, reliability
 from designer import EARTH, INVENTORY, assess, atmosphere_flags, earth_figure, guidance, prebreathe_index, tradeoff_figure
 from scoring import CURATED, HABITATS, WEIGHTS, score
 
@@ -428,7 +428,7 @@ elif page == "🧯 Equipment":
                     "Lowering oxygen is the strongest suppressant, and it works against you in O₂-enriched Moon-base air. "
                     "*Source: FLEX, PSI-69.*")
     with t2:
-        sr = pd.read_csv(DATA / "raw" / "PSI-101__SAME-R.csv", encoding="latin-1")
+        sr = pd.read_csv(raw_path("PSI-101__SAME-R.csv"), encoding="latin-1")
         g = sr.groupby("Sample Type")["Rt/R0"].median().sort_values()
         fig = go.Figure(go.Bar(x=g.values, y=g.index, orientation="h", marker_color="#FFB020",
                                text=[f"+{(v - 1) * 100:.0f}%" for v in g.values], textposition="outside"))

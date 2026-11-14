@@ -10,11 +10,23 @@ import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor
 from sklearn.model_selection import KFold, cross_val_predict
 
-RAW = Path(__file__).parent / "data" / "raw"
+ROOT = Path(__file__).parent
+RAW = ROOT / "data" / "raw"
+
+
+def raw_path(name: str) -> Path:
+    """Find a raw PSI table wherever it was uploaded in the repo (data/raw, data, repo root, any subfolder)."""
+    for p in (RAW / name, ROOT / "data" / name, ROOT / name):
+        if p.exists():
+            return p
+    hits = sorted(ROOT.rglob(name))
+    if hits:
+        return hits[0]
+    raise FileNotFoundError(f"{name} not found. Upload it to data/raw/ in the repo.")
 
 
 def _read(name):
-    d = pd.read_csv(RAW / name, encoding="latin-1")
+    d = pd.read_csv(raw_path(name), encoding="latin-1")
     d.columns = [c.replace("ï»¿", "").strip() for c in d.columns]
     return d
 
