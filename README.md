@@ -21,7 +21,7 @@ fire-safety answers for crewed habitats (ISS, Moon base and rovers, spacesuits, 
 
 Every page starts with a short "What this page tells you" box, and nothing from v3 was removed.
 
-**Key findings:** of 2,027 tests with recorded O₂ and pressure, only 74 fall in the planned Moon-base atmosphere, and **none of
+**Key findings:** of 2,054 tests with recorded O₂ and pressure, only 87 fall in the planned Moon-base atmosphere, and **none of
 them used solid materials**. In FLEX and CFI-G, flames become much less likely to go out on their own as oxygen rises.
 
 ## Models (5-fold cross-validation)
@@ -49,6 +49,13 @@ CFI-G burn time (R² 0.31), BASS-II CO₂ produced (R² 0.19).
 **Correction we made:** NASA's FM2 work suggests some materials burn at *lower* oxygen in lunar gravity than on Earth,
 so partial gravity can be the worst case. The app says so; it does not assume Moon fire risk lies "between" ISS and Earth.
 
+## v6 additions
+- 🔗 **Share button** on every page: the link opens that exact page and location (`?view=gaps&loc=moonbase`).
+- **Ranking presets** (Balanced, Habitat designer, Materials engineer, Modeller) on the risk page.
+- 🌬️ **"Will turning off the fans put the fire out?"** combines ACME BRE (194 flames that kept burning with no airflow, up to 40% O₂)
+  with BASS/BASS-II flames that did go out when flow stopped.
+- 🌍 **Gravity coverage strip** (0 g / Moon / Mars / 1 g) on the gaps page, with the FM2 partial-gravity warning.
+
 ## Run locally
     pip install -r requirements.txt
     streamlit run app.py
@@ -56,7 +63,7 @@ Raw tables can sit in data/raw/ or anywhere in the repo; the app finds them. `.s
 
 ## Data pipeline (already run; outputs are in data/)
 1. `harvest_psi.py` downloads PSI metadata + experimental tables (public PSI API)
-2. `normalize_psi.py psi_combustion_data` builds `data/tests_normalized.csv` (one schema for 2,961 tests; BASS rows enriched from data/extra/bass_as_run.csv)
+2. `normalize_psi.py psi_combustion_data` builds `data/tests_normalized.csv` (one schema for 2,963 tests; BASS rows enriched from data/extra/bass_as_run.csv; ACME BRE given its nominal exploration-atmosphere pressures 21%/14.7, 26.5%/10.2, 34%/8.2 psi, flagged in `p_source`)
 3. `extract_attributes.py` (optional; needs ANTHROPIC_API_KEY) builds `data/investigations_enriched.json`
    with AI-extracted attributes, which the app shows labelled "(AI)". Have a person review it.
 Raw tables used by the model and the equipment charts are in `data/raw/`.

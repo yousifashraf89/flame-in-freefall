@@ -103,10 +103,19 @@ for f, o2col in [("PSI-159__CFI-G_Normal_Flames.csv", "XO2 before test"), ("PSI-
         o2_source="measured", p_source="measured"))
 
 d = read("PSI-20__ACME_BRE.csv")   # O2 levels listed per test day; pressure varied but not tabulated
-recs = [dict(test_id=f"{r['Year']}-{r['Month']}-{r['Date']}", fuel=r["Fuel Bottle"], o2_fraction=o2 / 100)
-        for _, r in d.iterrows() for o2 in nums(r["Oxygen Conc (percent)"]) if o2 <= 100]
-rows.append(frame("PSI-20", "ACME BRE", "gas", **pd.DataFrame(recs).to_dict("list"), pressure_atm=np.nan,
-                  flow_cm_s=0.0, diluent="N2", outcome=None, burn_time_s=np.nan, o2_source="listed", p_source="unknown"))
+# BRE ran in NASA's three exploration atmospheres; the table lists O2 only, so pressure is the nominal pair for that O2.
+BRE_P_PSI = {21.0: 14.7, 26.5: 10.2, 34.0: 8.2}
+recs = []
+for _, r in d.iterrows():
+    for o2 in nums(r["Oxygen Conc (percent)"]):
+        o2 = o2 / 100 if o2 > 100 else o2          # "3400%" typo in the PSI table = 34%
+        p = BRE_P_PSI.get(round(o2, 1))
+        recs.append(dict(test_id=f"{r['Year']}-{r['Month']}-{r['Date']}", fuel=r["Fuel Bottle"], o2_fraction=o2 / 100,
+                         pressure_atm=p / 14.696 if p else np.nan, p_source="nominal (BRE atmosphere pair)" if p else "unknown"))
+rec = pd.DataFrame(recs)
+rows.append(frame("PSI-20", "ACME BRE", "gas", test_id=rec.test_id, fuel=rec.fuel, o2_fraction=rec.o2_fraction,
+                  pressure_atm=rec.pressure_atm, flow_cm_s=0.0, diluent="N2", outcome="burned (no airflow)",
+                  burn_time_s=np.nan, o2_source="listed", p_source=rec.p_source))
 
 d = read("PSI-23__ACME_s-Flame.csv")   # notes: atmosphere ~1 atm
 rows.append(frame("PSI-23", "ACME s-Flame", "gas",

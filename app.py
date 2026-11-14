@@ -126,6 +126,36 @@ known = tests.dropna(subset=["o2_fraction", "pressure_atm"])
 ss = st.session_state
 ss.setdefault("view", "home")
 ss.setdefault("loc", None)
+VIEWS_ALL = ["home", "risk", "designer", "predict", "gaps", "equipment", "atmosphere", "lessons", "data", "ask", "earth", "about"]
+if not ss.get("_qp_loaded"):                      # open a shared link straight on a page + location
+    ss._qp_loaded = True
+    _qp = st.query_params
+    if _qp.get("loc") in LOCATIONS:
+        ss.loc = _qp["loc"]
+    if _qp.get("view") in VIEWS_ALL and (ss.loc or _qp.get("view") in ("home", "earth", "about")):
+        ss.view = _qp["view"]
+
+
+def share_url():
+    q = f"?view={ss.view}" + (f"&loc={ss.loc}" if ss.loc else "")
+    try:
+        base = str(st.context.url).split("?")[0]
+    except Exception:
+        try:
+            base = f"https://{st.context.headers.get('Host', '')}/"
+        except Exception:
+            base = ""
+    return base + q
+
+
+PRESETS = {"Balanced": WEIGHTS,
+           "Habitat designer": dict(pillar=0.25, envelope=0.45, fuel=0.20, data=0.10),
+           "Materials engineer": dict(pillar=0.30, envelope=0.20, fuel=0.40, data=0.10),
+           "Modeller": dict(pillar=0.20, envelope=0.20, fuel=0.10, data=0.50)}
+
+
+def set_preset(p):
+    ss.update({f"w_{k}": float(v) for k, v in PRESETS[p].items()})
 
 
 def go_view(v):
@@ -174,8 +204,11 @@ def current():
 
 def top_bar(title):
     loc, o2, p_psi = current()
-    a, b, c = st.columns([1, 4, 1.3])
+    a, b, d, c = st.columns([1, 4, 1, 1.3])
     a.button("← Back", on_click=go_view, args=("home",), width="stretch")
+    with d.popover("🔗 Share", width="stretch"):
+        st.caption("Copy this link: it opens this exact page and location.")
+        st.code(share_url(), language=None)
     b.markdown(f'<div style="padding-top:6px"><span class="chip">{loc["icon"]} {loc["name"]}</span>'
                f'<span class="chip">{o2:.0%} O₂ · {p_psi:.1f} psi</span><span class="chip">{loc["g"]}</span>'
                + ('<span class="chip warn">no partial-gravity data in PSI</span>' if "g" in loc["g"] and "/" in loc["g"] else "")
@@ -316,10 +349,16 @@ elif ss.view == "risk":
     with st.expander("⚖️ How the relevance score works (and change the weights)"):
         st.markdown("Score = fire-safety focus + how close NASA's tests came to this atmosphere + fuel relevance "
                     "(solids count most) + amount of data. Default weights 35 / 30 / 20 / 15.")
+        st.markdown("**Quick presets:** pick who you are, or move the sliders yourself.")
+        pc = st.columns(4)
+        for col, (pname, why) in zip(pc, [("Balanced", "our default"), ("Habitat designer", "closest atmosphere first"),
+                                          ("Materials engineer", "solid materials first"), ("Modeller", "most data first")]):
+            col.button(pname, on_click=set_preset, args=(pname,), key=f"pre_{pname}", help=why, width="stretch")
         wc = st.columns(4)
         for col, (k, lbl) in zip(wc, [("pillar", "Fire-safety focus"), ("envelope", "Closeness of tests"),
                                       ("fuel", "Fuel relevance"), ("data", "Data richness")]):
-            col.slider(lbl, 0.0, 1.0, float(ss.get(f"w_{k}", WEIGHTS[k])), 0.05, key=f"w_{k}")
+            ss.setdefault(f"w_{k}", WEIGHTS[k])
+            col.slider(lbl, 0.0, 1.0, step=0.05, key=f"w_{k}")
         top = ranked.head(10)
         fig = go.Figure()
         for k, label, color in [("pillar", "Fire-safety focus", "#E52207"), ("envelope", "Closeness of tests", "#FF5804"),
@@ -529,6 +568,17 @@ elif ss.view == "gaps":
     fig.add_scatter(x=[o2 * 100], y=[p_psi], mode="markers", name="This location",
                     marker=dict(symbol="x", size=18, color="#FF5804", line=dict(width=3)))
     st.plotly_chart(light(fig, 520), width="stretch")
+    st.markdown("### 🌍 Which gravity levels have fire data?")
+    gcols = st.columns(4)
+    for col, (gname, gval, txt, tone) in zip(gcols, [
+            ("Microgravity", "0 g", "19 ISS & Cygnus flight investigations", "green"),
+            ("Moon", "0.16 g", "No data yet. FM2 and LUCI are planned", "red"),
+            ("Mars", "0.38 g", "No data", "red"),
+            ("Earth", "1 g", "Ground tests & 1-g reference burns", "blue")]):
+        kpi(col, gval, f"<b>{gname}</b><br>{txt}", tone)
+    st.markdown("**Careful:** you can't assume Moon or Mars fires fall *between* space and Earth. NASA's FM2 team notes some "
+                "materials may burn at **lower** oxygen in lunar gravity than on Earth, because a weak upward flow can feed a flame "
+                "without cooling it. Partial gravity may be the worst case, which is why it's the top gap.")
     st.markdown("### 🧪 The tests NASA should run next")
     gaps = gap_table(tests)
     for r in gaps.head(3).itertuples():
@@ -593,6 +643,20 @@ elif ss.view == "equipment":
             fig.update_layout(title="How 106 BASS solid-material fires on the ISS ended (crew notes)", xaxis_title="tests")
             st.plotly_chart(light(fig, 320), width="stretch")
             st.caption("From the BASS 'As Run' test matrix in PSI (measured O₂ 16–23%, ~1 atm).")
+        st.markdown("#### 🌬️ Will turning off the fans put the fire out?")
+        bre = tests[tests.psi_id == "PSI-20"]
+        n_off = int((bass_ar.outcome == "went out when airflow stopped").sum()) if len(bass_ar) else 0
+        n_b2 = int(bass2.flow_to_extinction.sum()) if len(bass2) else 0
+        v1, v2 = st.columns(2)
+        v1.markdown(f'<div class="card"><b>❌ Not for gas-fed flames</b><br>ACME BRE lit 194 flames over {bre.test_id.nunique()} test days with <b>zero airflow</b>, '
+                    f'at {bre.o2_fraction.min():.0%}–{bre.o2_fraction.max():.0%} O₂, including Moon-base/rover air (34%, 8.2 psi). '
+                    'They kept burning steadily.<br><span class="small">Source: ACME BRE (PSI-20)</span></div>', unsafe_allow_html=True)
+        v2.markdown(f'<div class="card"><b>✅ Sometimes for solid materials</b><br>In BASS, <b>{n_off} of {len(bass_ar)}</b> solid fires went out '
+                    f'when the crew stopped the airflow, and BASS-II slowed the flow until flames died in <b>{n_b2} of {len(bass2)}</b> runs. But crew notes '
+                    'also show a flame wake surviving a nitrogen jet with the air off.<br><span class="small">Source: BASS As Run (PSI-26), '
+                    'BASS-II (PSI-25)</span></div>', unsafe_allow_html=True)
+        st.markdown("**Takeaway:** fan shutdown helps some fires and not others, and the highest-oxygen data (BRE) says it fails. "
+                    "Moon and Mars habitats need active suppression, not ventilation shutdown alone.")
         if "L4" in kb:
             st.markdown(f'<div class="lesson"><b>📜 {kb["L4"]["title"]}</b><br>{kb["L4"]["text"]}<br><span class="small">{kb["L4"]["source"]}</span></div>',
                         unsafe_allow_html=True)
@@ -899,6 +963,10 @@ nearest real test; four cross-validated machine-learning models (see *Predict a 
 **Benefits on Earth:** fine-water-mist extinguishers developed for the ISS · a shuttle-era smoke detector that tells smoke
 from dust (now used in mining) · firefighter air tanks and protective clothing based on spacesuit technology.
 """)
+
+_want = {"view": ss.view, **({"loc": ss.loc} if ss.loc else {})}
+if dict(st.query_params) != _want:
+    st.query_params.from_dict(_want)
 
 st.markdown(f'<div class="small" style="margin-top:30px;border-top:1px solid #DFE1E2;padding-top:10px">'
             f'<img src="{LOGO}" style="height:26px;vertical-align:middle;margin-right:10px;background:#1B2B85;padding:3px 6px;border-radius:6px">'
